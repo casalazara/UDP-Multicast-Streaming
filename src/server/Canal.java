@@ -57,7 +57,6 @@ public class Canal implements Runnable {
 			addr = InetAddress.getByName(this.grupo);
 			MulticastSocket socket = new MulticastSocket();
 
-			final DatagramPacket packet = new DatagramPacket(data, data.length);
 			while (true) {
 				if (camera.read(frame)) {
 					MatOfByte mob=new MatOfByte();
